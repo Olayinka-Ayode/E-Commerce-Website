@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Shop</title>
@@ -12,14 +13,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css"
-    /> -->
     <script
       src="https://kit.fontawesome.com/35f12e8b00.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./app.js" defer></script>
   </head>
   <body>
     <div class="header">
@@ -29,7 +27,7 @@
             <img src="./logo.png" alt="Company Logo" />
           </div>
           <nav>
-            <ul>
+            <ul id="menuItems">
               <li><a href="">Home</a></li>
               <li><a href="">Products</a></li>
               <li><a href="">About Us</a></li>
@@ -38,6 +36,7 @@
             </ul>
           </nav>
           <img src="./cart.png" class="cart" alt="" />
+          <img src="./menu.png" class="menu-icon" alt="" onclick="menuToggle()" />
         </div>
         <div class="row">
           <div class="col-2">
@@ -263,14 +262,14 @@
               eaque cum, quos id minima esse?
             </p>
             <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-              </div>
-              <img src="./user-1.png" alt="">
-              <h3>Sean Parker</h3>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <img src="./user-1.png" alt="" />
+            <h3>Sean Parker</h3>
           </div>
           <div class="col-3">
             <i class="fa fa-quote-left"></i>
@@ -280,14 +279,14 @@
               eaque cum, quos id minima esse?
             </p>
             <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-              </div>
-              <img src="./user-2.png" alt="">
-              <h3>Mike Smith</h3>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <img src="./user-2.png" alt="" />
+            <h3>Mike Smith</h3>
           </div>
           <div class="col-3">
             <i class="fa fa-quote-left"></i>
@@ -297,40 +296,87 @@
               eaque cum, quos id minima esse?
             </p>
             <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-              </div>
-              <img src="./user-3.png" alt="">
-              <h3>Mabel Joe</h3>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <img src="./user-3.png" alt="" />
+            <h3>Mabel Joe</h3>
           </div>
         </div>
       </div>
     </div>
 
-            <!-- Brands -->
+    <!-- Brands -->
     <div class="brands">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-5">
-                    <img src="./logo-godrej.png" alt="">
-                </div>
-                <div class="col-5">
-                    <img src="./logo-oppo.png" alt="">
-                </div>
-                <div class="col-5">
-                    <img src="./logo-coca-cola.png" alt="">
-                </div>
-                <div class="col-5">
-                    <img src="./logo-paypal.png" alt="">
-                </div>
-                <div class="col-5">
-                    <img src="./logo-philips.png" alt="">
-                </div>
-            </div>
+      <div class="small-container">
+        <div class="row">
+          <div class="col-5">
+            <img src="./logo-godrej.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="./logo-oppo.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="./logo-coca-cola.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="./logo-paypal.png" alt="" />
+          </div>
+          <div class="col-5">
+            <img src="./logo-philips.png" alt="" />
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>
+              Our App is available on the Google Play Store and the IOS App
+              Store
+            </p>
+            <div class="app-logo">
+                <img src="./play-store.png" alt="">
+                <img src="./app-store.png" alt="">
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="./logo-white.png" alt="" />
+            <p>
+              Our Purpose Is To Sustainably Make the Pleasure and Benefits of
+              Sports Accessible to the Many.
+            </p>
+         </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+                <li>Coupons</li>
+                <li>Blog List</li>
+                <li>Return Policy</li>
+                <li>Join Affiliate</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="copyright">CopyRight 2022 - Olayinka Ayodele</p>
+      </div>
     </div>
   </body>
 </html>
